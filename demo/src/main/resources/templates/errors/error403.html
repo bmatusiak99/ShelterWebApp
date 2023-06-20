@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      th:with="pageName='home', pageTitle='403 - Access Denied'"
+>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <h1>403 - Access Denied</h1>
+    <div>
+        <div>Hello <span sec:authentication="principal.username"/>!
+            You don't have enabled permissions to the website
+        </div>
+    </div>
+    <a class="h2" th:href="@{/}"> Home page</a>
+</div>
+</body>
+</html>
